@@ -1,0 +1,20 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.wrapper{
+    padding: 1rem;
+}
+
+
+.logo img{
+    width: 150px;
+}
+
+.book__list{
+    border: 1px solid;
+    /* overflow: scroll; */
+}
+

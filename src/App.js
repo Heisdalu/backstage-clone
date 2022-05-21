@@ -1,11 +1,12 @@
 import React from "react";
+import Logo from './assets/logo.webp'
 import './App.css'
-// import lol from './assets/backstagetalks_cover_issue_3.webp'
-// C:\Users\HP\Desktop\DIVINE\backstage-clone\src\assets\backstagetalks_cover_issue_3.png
 
 const App = () => {
     return (
-        <div className="wrapper">lol</div>
+        <div className="wrapper">
+            <header className="logo"><img src={Logo} alt="backstage logo"/></header>
+        </div>
     )
 }
 
