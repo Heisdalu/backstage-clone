@@ -1,0 +1,48 @@
+.intro_section{
+  border: 1px solid;
+  padding: 1rem;
+  scroll-snap-align: start;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.intro_text {
+  color: #251d20;
+  font-weight: 600;
+  line-height: 1.5rem;
+}
+
+.copyright{
+  text-align: center;
+  margin: 0rem 0;
+  font-size: 0.8rem;
+  color: #251d20;
+}
+
+.copyright a{
+  color: #251d20;
+  
+}
+
+.privacy_policy{
+  margin: 1rem 0;
+  text-align: center;
+}
+
+.privacy_policy a{
+  color: #251d20;
+  font-weight: 700;
+
+}
+
+.email_link{
+  margin: 3rem 0;
+  margin-bottom: 4rem;
+  text-align: center;
+}
+
+.email_link a{
+  color: #251d20;
+  font-weight: 700;
+  
+}
