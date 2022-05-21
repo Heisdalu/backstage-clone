@@ -1,0 +1,15 @@
+body{
+    background-color: #00c1b5;
+}
+
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.image{
+    height: 320px;
+}
