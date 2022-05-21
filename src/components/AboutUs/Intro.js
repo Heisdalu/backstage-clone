@@ -5,7 +5,7 @@ import "./Intro.css";
 const Intro = () => {
   return (
     <>
-      <section className="intro_section">
+      <footer className="intro_section">
         <section className="intro_text">
           <p>
             Backstage Talks is a magazine of casual, but in depth dialogues on
@@ -23,7 +23,7 @@ const Intro = () => {
         <section className="email_link">
           <a href="#">info@backstagetalks.com</a>
         </section>
-      </section>
+      </footer>
     </>
   );
 };
