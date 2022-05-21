@@ -3,7 +3,6 @@ body {
 }
 
 .container {
-  border-top: 2px solid black;
   scroll-snap-align: start;
   display: flex;
   justify-content: center;
