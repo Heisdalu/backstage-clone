@@ -1,12 +1,22 @@
 import React from "react";
-import firstImage from "../../assets/backstagetalks_cover_issue_3.webp";
 import './BookCard.css'
 
 
-const BookCard = () => {
+const BookCard = (props) => {
+  const showButton = props.active_button ? (
+    <button className="buy_btn">BUY HERE</button>
+  ) : (
+    ""
+  );
   return (
     <article className="container">
-      <img className="image" src={firstImage} alt="A blue book" />
+      <img className="image" src={props.image} alt="A blue book" />
+
+      <section className="sub_container">
+       <h1 className="title">{props.title}</h1>
+       {showButton}
+       <p className="text">{props.otherText}<span className="selected__text">selected stores</span>.</p>
+      </section>
     </article>
   );
 };

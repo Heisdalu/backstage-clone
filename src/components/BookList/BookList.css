@@ -1,5 +1,11 @@
 .book__list{
     border: 1px solid;
-    /* overflow: scroll; */
+    overflow: scroll;
+    max-height: 100vh;
+    width: 100vw;
+    scroll-snap-type: y mandatory;
 }
 
+.book__list::-webkit-scrollbar{
+    display: none;
+}
