@@ -6,7 +6,9 @@ import fourthImage from "../../assets/backstagetalks_cover2017.webp";
 import fifthImage from "../../assets/backstagetalks_cover2016_n.webp";
 
 import BookCard from "./BookCard";
-import './BookList.css'
+import Intro from "../AboutUs/Intro";
+import "./BookList.css";
+
 
 const BookList = () => {
   return (
@@ -41,6 +43,7 @@ const BookList = () => {
         title="Issue #1"
         otherText="If you are lucky, you may get the last pieces in "
       />
+      <Intro />
     </section>
   );
 };
