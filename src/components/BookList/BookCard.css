@@ -76,4 +76,7 @@ body {
   .container{
     justify-content: start;
   }
+  .text{
+    max-width: none;
+  }
 }
