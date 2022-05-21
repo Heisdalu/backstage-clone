@@ -12,7 +12,9 @@ body {
 }
 
 .image {
-  height: 320px;
+  /* height: 320px; */
+  /* max-width: 400px; */
+  width: 270px;
 }
 
 .sub_container {
@@ -63,3 +65,15 @@ body {
   font-size: 1.1rem;
 }
 
+@media screen and (min-width:400px){
+  .image{
+    width: 400px;
+  }
+}
+
+
+@media screen and (min-width:1200px){
+  .container{
+    justify-content: start;
+  }
+}
