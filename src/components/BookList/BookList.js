@@ -1,11 +1,48 @@
 import React from "react";
-import BookCard from "./BookCard";
+import firstImage from "../../assets/backstagetalks_cover_issue_5.webp";
+import secondImage from "../../assets/backstagetalks_cover_issue_4.webp";
+import thirdmage from "../../assets/backstagetalks_cover_issue_3.webp";
+import fourthImage from "../../assets/backstagetalks_cover2017.webp";
+import fifthImage from "../../assets/backstagetalks_cover2016_n.webp";
 
+import BookCard from "./BookCard";
+import './BookList.css'
 
 const BookList = () => {
-    return <section className=".book__list">
-        <BookCard />
-    </section>;
-}
+  return (
+    <section className="book__list">
+      <BookCard
+        image={firstImage}
+        active_button={true}
+        title="Issue #5"
+        otherText="or in "
+      />
+      <BookCard
+        image={secondImage}
+        active_button={true}
+        title="Issue #4"
+        otherText="or in "
+      />
+      <BookCard
+        image={thirdmage}
+        active_button={true}
+        title="Issue #3"
+        otherText="or in "
+      />
+      <BookCard
+        image={fourthImage}
+        active_button={true}
+        title="Issue #2"
+        otherText="or in "
+      />
+      <BookCard
+        image={fifthImage}
+        active_button={false}
+        title="Issue #1"
+        otherText="If you are lucky, you may get the last pieces in "
+      />
+    </section>
+  );
+};
 
-export default BookList
+export default BookList;

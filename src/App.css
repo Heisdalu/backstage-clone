@@ -4,10 +4,13 @@
   box-sizing: border-box;
 }
 
-.wrapper{
-    padding: 1rem;
+body{
+  overflow: hidden;
 }
 
+.logo{
+  padding: 1rem;
+}
 
 .logo img{
     width: 150px;
