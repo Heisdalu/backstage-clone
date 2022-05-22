@@ -65,6 +65,8 @@ body {
   font-size: 1.1rem;
 }
 
+
+
 @media screen and (min-width:400px){
   .image{
     width: 400px;
@@ -79,4 +81,13 @@ body {
   .text{
     max-width: none;
   }
+}
+
+@media screen and (max-width:900px) {
+  @media (orientation: landscape) {
+  .container{
+    height: auto;
+  }
+  
+}
 }
