@@ -1,0 +1,27 @@
+.issueBox{
+    display: none;
+}
+
+@media screen and (min-width: 1200px) {
+    .issueBox{
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        bottom: 5rem;
+        right: 1.2rem;
+    }
+    
+    .issueBox > * + *{
+        margin-top: 10px;
+    }
+
+    .issueTab{
+        color: #251d20;
+        font-weight: 500;
+    }
+
+    .issueBtn--active{
+        font-weight: 900;
+    }
+    
+}
