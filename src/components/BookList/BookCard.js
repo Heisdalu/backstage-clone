@@ -6,7 +6,6 @@ const BookCard = (props) => {
 
   useEffect(() => {
     if (!props.point) return;
-    // console.log(elem.current.getBoundingClientRect().y === props.point.y);
     const dert = elem.current.getBoundingClientRect().y === props.point.y
     if(dert) {
       document.body.style.backgroundColor = props.hexCode;
