@@ -12,6 +12,9 @@ body{
 
 .logo{
   padding: 1rem;
+  position: fixed;
+  top: 0;
+  width: 100%;
 }
 
 .logo img{
@@ -22,6 +25,10 @@ body{
 @media screen and (min-width:1200px){
   .wrapper{
     position: relative;
+  }
+
+  .logo{
+    width: auto;
   }
 
   .logo img{

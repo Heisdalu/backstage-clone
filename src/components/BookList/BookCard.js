@@ -9,13 +9,17 @@ const BookCard = (props) => {
   let book_timeout;
   const func = ([entry]) => {
     clearTimeout(book_timeout);
-
+    
     book_timeout = setTimeout(() => {
       // console.log(entry.isIntersecting, props.title);
-
+      
       if (entry.isIntersecting) {
+
+        props.otherRef.current.style.backgroundColor = props.hexCode;
         document.body.style.backgroundColor = props.hexCode;
         document.body.style.transition = "0.7s background-Color ease";
+        props.otherRef.current.style.transition =
+          "0.7s background-Color ease";
       }
     }, 100);
   };
@@ -30,8 +34,6 @@ const BookCard = (props) => {
     const elemObserver = new IntersectionObserver(func, elemObj);
 
     elemObserver.observe(elem.current);
-
-    // elemObserver.observe(elem);
   });
 
   const showButton = props.active_button ? (

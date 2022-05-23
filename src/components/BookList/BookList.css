@@ -1,4 +1,6 @@
 .book__list {
+  border: none;
+  outline: none;
   margin-top: -1rem;
   overflow: scroll;
   max-height: 100vh;
