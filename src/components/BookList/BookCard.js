@@ -1,16 +1,37 @@
-import React, { useEffect, useRef} from "react";
+import React, { useEffect, useRef } from "react";
 import "./BookCard.css";
 
 const BookCard = (props) => {
   const elem = useRef();
+  const lol = document.querySelector(".book__list");
+
+  // debouncing intersection observer api
+  let book_timeout;
+  const func = ([entry]) => {
+    clearTimeout(book_timeout);
+
+    book_timeout = setTimeout(() => {
+      // console.log(entry.isIntersecting, props.title);
+
+      if (entry.isIntersecting) {
+        document.body.style.backgroundColor = props.hexCode;
+        document.body.style.transition = "0.7s background-Color ease";
+      }
+    }, 100);
+  };
 
   useEffect(() => {
-    if (!props.point) return;
-    const dert = elem.current.getBoundingClientRect().y === props.point.y
-    if(dert) {
-      document.body.style.backgroundColor = props.hexCode;
-      document.body.style.transition = "0.5s background-Color ease";
-    }
+    const elemObj = {
+      root: lol,
+      rootMargin: "",
+      threshold: 0.5,
+    };
+
+    const elemObserver = new IntersectionObserver(func, elemObj);
+
+    elemObserver.observe(elem.current);
+
+    // elemObserver.observe(elem);
   });
 
   const showButton = props.active_button ? (
