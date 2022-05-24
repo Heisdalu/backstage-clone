@@ -10,8 +10,9 @@ import Intro from "../AboutUs/Intro";
 import "./BookList.css";
 
 const BookList = (props) => {
-
   const bookListRef = useRef();
+
+ 
   useEffect(() => {
     bookListRef.current.focus();
   });
@@ -25,6 +26,9 @@ const BookList = (props) => {
         otherText="or in "
         hexCode="#00c1b5"
         otherRef={props.otherRef}
+        id="issue5"
+        active={props.active}
+        parentRef={bookListRef}
       />
       <BookCard
         image={secondImage}
@@ -33,6 +37,9 @@ const BookList = (props) => {
         otherText="or in "
         hexCode="#ff651a"
         otherRef={props.otherRef}
+        id="issue4"
+        active={props.active}
+        parentRef={bookListRef}
       />
       <BookCard
         image={thirdmage}
@@ -41,6 +48,9 @@ const BookList = (props) => {
         otherText="or in "
         hexCode="#ffbe00"
         otherRef={props.otherRef}
+        id="issue3"
+        active={props.active}
+        parentRef={bookListRef}
       />
       <BookCard
         image={fourthImage}
@@ -49,6 +59,9 @@ const BookList = (props) => {
         otherText="or in "
         hexCode="#1d3fbb"
         otherRef={props.otherRef}
+        id="issue2"
+        active={props.active}
+        parentRef={bookListRef}
       />
       <BookCard
         image={fifthImage}
@@ -57,6 +70,9 @@ const BookList = (props) => {
         otherText="If you are lucky, you may get the last pieces in "
         hexCode="#e30512"
         otherRef={props.otherRef}
+        id="issue1"
+        active={props.active}
+        parentRef={bookListRef}
       />
       <Intro />
     </section>

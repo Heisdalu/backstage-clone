@@ -1,15 +1,28 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import React from "react";
+import React, {useRef} from "react";
 import "./IssueList.css";
 
-const IssueList = () => {
+const IssueList = (props) => {
+  console.log(props);
+  const issueRef = useRef();
+
   return (
-    <nav className="issueBox">
-      <a href="#" className="issueTab">Issue #5</a>
-      <a href="#" className="issueTab">Issue #4</a>
-      <a href="#" className="issueTab">Issue #3</a>
-      <a href="#" className="issueTab">Issue #2</a>
-      <a href="#" className="issueTab">Issue #1</a>
+    <nav className="issueBox" ref={issueRef}>
+      <button id="issue5" className="issueTab" onClick={props.click}>
+        Issue #5
+      </button>
+      <button id="issue4" className="issueTab" onClick={props.click}>
+        Issue #4
+      </button>
+      <button id="issue3" className="issueTab" onClick={props.click}>
+        Issue #3
+      </button>
+      <button id="issue2" className="issueTab" onClick={props.click}>
+        Issue #2
+      </button>
+      <button id="issue1" className="issueTab" onClick={props.click}>
+        Issue #1
+      </button>
     </nav>
   );
 };
