@@ -21,21 +21,10 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1rem;
 }
 
 .sub_container > * + * {
   margin-top: 1rem;
-}
-
-@supports (gap: 1rem) {
-  .sub_container > * + * {
-    margin-top: 0;
-  }
-
-  .sub_container {
-    gap: 1rem;
-  }
 }
 
 .title {
