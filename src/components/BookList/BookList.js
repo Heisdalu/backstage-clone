@@ -1,9 +1,14 @@
 import { useEffect, useRef } from "react";
 import firstImage from "../../assets/backstagetalks_cover_issue_5.webp";
+import firstImageFallback from "../../assets/fallback_pics/backstagetalks_cover_issue_5.png";
 import secondImage from "../../assets/backstagetalks_cover_issue_4.webp";
-import thirdmage from "../../assets/backstagetalks_cover_issue_3.webp";
+import secondImageFallback from "../../assets/fallback_pics/backstagetalks_cover_issue_4.png";
+import thirdImage from "../../assets/backstagetalks_cover_issue_3.webp";
+import thirdImageFallback from "../../assets/fallback_pics/backstagetalks_cover_issue_3.png";
 import fourthImage from "../../assets/backstagetalks_cover2017.webp";
+import fourthImageFallback from "../../assets/fallback_pics/backstagetalks_cover2017.png";
 import fifthImage from "../../assets/backstagetalks_cover2016_n.webp";
+import fifthImageFallback from "../../assets/fallback_pics/backstagetalks_cover2016_n.png";
 
 import BookCard from "./BookCard";
 import Intro from "../AboutUs/Intro";
@@ -21,6 +26,7 @@ const BookList = (props) => {
     <section className="book__list" tabIndex={2} ref={bookListRef}>
       <BookCard
         image={firstImage}
+        fallbackImage={firstImageFallback}
         active_button={true}
         title="Issue #5"
         otherText="or in "
@@ -32,6 +38,7 @@ const BookList = (props) => {
       />
       <BookCard
         image={secondImage}
+        fallbackImage={secondImageFallback}
         active_button={true}
         title="Issue #4"
         otherText="or in "
@@ -42,7 +49,8 @@ const BookList = (props) => {
         parentRef={bookListRef}
       />
       <BookCard
-        image={thirdmage}
+        image={thirdImage}
+        fallbackImage = {thirdImageFallback}
         active_button={true}
         title="Issue #3"
         otherText="or in "
@@ -54,6 +62,7 @@ const BookList = (props) => {
       />
       <BookCard
         image={fourthImage}
+        fallbackImage = {fourthImageFallback}
         active_button={true}
         title="Issue #2"
         otherText="or in "
@@ -65,6 +74,7 @@ const BookList = (props) => {
       />
       <BookCard
         image={fifthImage}
+        fallbackImage = {fifthImageFallback}
         active_button={false}
         title="Issue #1"
         otherText="If you are lucky, you may get the last pieces in "

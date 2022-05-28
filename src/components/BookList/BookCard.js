@@ -16,29 +16,29 @@ const BookCard = (props) => {
         document.body.style.backgroundColor = props.hexCode;
         document.body.style.transition = "0.7s background-Color ease";
         props.otherRef.current.style.transition = "0.7s background-Color ease";
-        document.querySelectorAll(".issueTab").forEach(el => el.style.fontWeight = '');
-        document.getElementById(entry.target.id).style.fontWeight = 'bold'
-        
+        document
+          .querySelectorAll(".issueTab")
+          .forEach((el) => (el.style.fontWeight = ""));
+        document.getElementById(entry.target.id).style.fontWeight = "bold";
       }
     }, 50);
   };
-  
+
   useEffect(() => {
     const elemObj = {
       root: rootElem,
       rootMargin: "",
       threshold: 0.5,
     };
-    
+
     const elemObserver = new IntersectionObserver(func, elemObj);
-    
+
     elemObserver.observe(elem.current);
-    
+
     //issues
     if (props.active === props.id) {
       console.dir(props.active);
-      console.log(document.querySelectorAll('.issueTab'));
-      
+      console.log(document.querySelectorAll(".issueTab"));
 
       const rect = elem.current;
       console.log(rect);
@@ -56,7 +56,10 @@ const BookCard = (props) => {
   );
   return (
     <article className="container" ref={elem} id={props.id}>
-      <img className="image" src={props.image} alt="A blue book" />
+      <picture>
+        <source srcSet={props.image} type="image/webp" />
+        <img className="image" src={props.fallbackImage} alt="A blue book" />
+      </picture>
 
       <section className="sub_container">
         <h1 className="title">{props.title}</h1>
